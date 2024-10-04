@@ -61,12 +61,65 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-4 relative">
-          <Link
-            href="/tutorials"
-            className="text-white px-4 py-2 rounded-md transition-transform duration-300 ease-in-out hover:scale-105"
-          >
-            Tutorials
-          </Link>
+          <div className="group relative">
+            <Link
+              href="/tutorials"
+              className="text-white px-4 py-2 rounded-md transition-transform duration-300 ease-in-out hover:scale-105"
+            >
+              Tutorials
+            </Link>
+            {/* Dropdown Menu */}
+            <div className="absolute left-0 mt-2 w-48 bg-white text-blue-800 rounded-md shadow-lg hidden group-hover:block z-10">
+              <Link
+                href="/tutorials/math"
+                className="block px-4 py-2 hover:bg-gray-200"
+              >
+                Math
+              </Link>
+              <Link
+                href="/tutorials/science"
+                className="block px-4 py-2 hover:bg-gray-200"
+              >
+                Science
+              </Link>
+              <Link
+                href="/tutorials/languages"
+                className="block px-4 py-2 hover:bg-gray-200"
+              >
+                Languages
+              </Link>
+              <Link
+                href="/tutorials/arts"
+                className="block px-4 py-2 hover:bg-gray-200"
+              >
+                Arts
+              </Link>
+              <Link
+                href="/tutorials/history"
+                className="block px-4 py-2 hover:bg-gray-200"
+              >
+                History
+              </Link>
+              <Link
+                href="/tutorials/computer-science"
+                className="block px-4 py-2 hover:bg-gray-200"
+              >
+                Computer Science
+              </Link>
+              <Link
+                href="/tutorials/music"
+                className="block px-4 py-2 hover:bg-gray-200"
+              >
+                Music
+              </Link>
+              <Link
+                href="/tutorials/literature"
+                className="block px-4 py-2 hover:bg-gray-200"
+              >
+                Literature
+              </Link>
+            </div>
+          </div>
           <Link
             href="/about"
             className="text-white px-4 py-2 rounded-md transition-transform duration-300 ease-in-out hover:scale-105"
@@ -99,35 +152,45 @@ export default function Header() {
             <Link
               href="/tutorials"
               className="block text-white px-4 py-2 rounded-md hover:bg-gray-700"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => {
+                setMenuOpen(false);
+              }}
             >
               Tutorials
             </Link>
             <Link
               href="/about"
               className="block text-white px-4 py-2 rounded-md hover:bg-gray-700"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => {
+                setMenuOpen(false);
+              }}
             >
               About Us
             </Link>
             <Link
               href="/contact"
               className="block text-white px-4 py-2 rounded-md hover:bg-gray-700"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => {
+                setMenuOpen(false);
+              }}
             >
               Contact
             </Link>
             <Link
               href="/login"
               className="block text-white px-4 py-2 rounded-md hover:bg-gray-700"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => {
+                setMenuOpen(false);
+              }}
             >
               Login
             </Link>
             <Link
               href="/signup"
               className="block text-white px-4 py-2 rounded-md hover:bg-gray-700"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => {
+                setMenuOpen(false);
+              }}
             >
               Sign Up
             </Link>
